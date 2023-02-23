@@ -11,7 +11,9 @@ const Events = () => {
         <div>
             <button onClick={HandleMyEvents}>Clique Aqui!</button>
         </div>
-
+        <div>
+            <button onClick={() => console.log('Clicou')}>Clique aqui também</button>
+        </div>
        </div> 
 
 
