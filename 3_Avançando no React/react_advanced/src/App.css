@@ -42,3 +42,14 @@
 header{
   text-align: center
 }
+
+
+img{
+  padding: 5px;
+  margin: 5px;
+  
+
+  /*resolução*/
+  width: 30%;
+  height: 30%;
+}
