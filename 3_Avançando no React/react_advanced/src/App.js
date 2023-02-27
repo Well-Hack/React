@@ -1,13 +1,18 @@
 import './App.css';
+import girl from "./assets/girl.jpg";
 
 function App() {
   return (
   <div>
     <h1>Seção 3: Avançando no react</h1>
-
-    <img src="/public/girl.jpg" alt="garota" />
-
+    {/*Imagem em public */}
+    <img src="farol.jpg" alt="farol" />
+      <div>
+      {/*Imagens em assets*/}
+      <img src={girl} alt="garota" />
+     </div>
   </div>  
+  
   );
 }
 
