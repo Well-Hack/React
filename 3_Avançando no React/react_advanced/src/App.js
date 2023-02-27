@@ -2,10 +2,12 @@ import './App.css';
 
 function App() {
   return (
-  <header>
+  <div>
     <h1>Seção 3: Avançando no react</h1>
-  </header>
-    
+
+    <img src="/public/girl.jpg" alt="garota" />
+
+  </div>  
   );
 }
 
