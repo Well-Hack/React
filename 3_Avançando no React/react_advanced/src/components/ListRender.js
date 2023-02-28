@@ -3,7 +3,7 @@ import {useState} from 'react';
 const ListRender = () => {
     const [list] = useState(['Mateus', 'Pedro', 'Lisa','Luana']);
   return (
-    <div>ListRender
+    <div>
         <ul>
             {list.map((item) => (
                 <li>{item}</li>
