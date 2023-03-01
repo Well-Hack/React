@@ -6,9 +6,9 @@ import ManageData from './components/ManageData.';
 import ShowUserName from './components/ShowUserName';
 import { useState } from "react";
 import CarDetails from './components/CarDetails';
+import Fragments from './components/Fragments';
 
 function App() {
-  const name ='Tomas';
   const [userName2] = useState ("Luana");
 
   const cars = [ 
@@ -40,6 +40,7 @@ function App() {
     {cars.map((car) =>(
       <CarDetails brand={car.brand} color={car.color} km = {car.km} neww={car.neww}/>
     ))}
+    <Fragments propFragments='Teste'/>
   </div>  
   );
 }
