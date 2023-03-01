@@ -25,7 +25,10 @@ function App() {
      {/*Props*/}
      <div><ShowUserName name={userName2}/></div>
      {/*Destruturing*/}
-     <CarDetails brand='vw' km={1000} color='Azul'/>
+     <CarDetails brand='vw' km={1000} color='Azul' neww={true}/>
+    {/*Reaproveitamento*/}
+    <CarDetails brand='Ford' color = 'Vermelho' km={0} neww={true}/>
+    <CarDetails brand='Chevrolet' color = 'Cinza' km={0} neww={false}/>
   </div>  
   );
 }
