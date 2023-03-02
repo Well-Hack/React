@@ -33,7 +33,7 @@ const ListRender = () => {
           ))}
         </ul>
 
-        <button onCLick={deleteRandom}>Delete random user</button>
+        <button onClick={deleteRandom}>Delete random user</button>
     </div>
   )
 }
