@@ -8,6 +8,7 @@ import { useState } from "react";
 import CarDetails from './components/CarDetails';
 import Fragments from './components/Fragments';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
 
 function App() {
   const [userName2] = useState ("Luana");
@@ -18,6 +19,12 @@ function App() {
    { id: 3, brand: 'Mercedes', color: 'Prata', km: 58, neww: false},
    {id: 4, brand: 'Nissan', color: 'Vermelho', km: 0, neww: true},
   ];
+
+    function showMessage(){
+      console.log('Evento de componente pai')
+    }
+
+
   return (
   <div>
     <h1>Seção 3: Avançando no react</h1>
@@ -39,13 +46,16 @@ function App() {
     <CarDetails brand='Chevrolet' color = 'Cinza' km={0} neww={false}/>
     {/*Loop de array de objetos*/}
     {cars.map((car) =>(
-      <CarDetails brand={car.brand} color={car.color} km = {car.km} neww={car.neww}/>
+      <CarDetails 
+      key={car.id}
+      brand={car.brand} color={car.color} km = {car.km} neww={car.neww}/>
     ))}
     <Fragments propFragments='Teste'/>
     {/*Children prop*/}
     <Container myValue='Testando'>
       <p>E este é o conteúdo</p>
     </Container>
+    <ExecuteFunction myFunction={showMessage}/>
   </div>  
   );
 }
