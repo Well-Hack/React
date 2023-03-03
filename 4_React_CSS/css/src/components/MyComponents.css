@@ -1,0 +1,16 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+p{
+    color: lightgreen;
+    background-color: black;
+}
+
+
+.my-comp-paragraph{
+    color: yellow;
+    background-color: blueviolet;
+}
