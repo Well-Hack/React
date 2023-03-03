@@ -10,7 +10,7 @@ function App() {
       <MyComponents/>
       <p>Este paragrafo é do App.js {'\n'}</p>
       {/*Inline Css*/}
-      <p style={{backgroundcolor: 'black',}}>
+      <p style={{backgroundcolor: 'black', color:'white', fontsize:'32px'}}>
         Este elemento foi estilizado de forma inline (dentro da tag)</p>
     </div>
   );
