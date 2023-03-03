@@ -15,6 +15,9 @@ function App() {
         Este elemento foi estilizado de forma inline (dentro da tag)</p>
       {/*Inline-dinamico Css*/}
       <h2 style={n < 10 ? ({color:'red'}) : ({color:'blue'})}>CSS dinamico</h2>
+      <p>ou</p>
+      <h2 style={n > 10 ? ({color:'red'}) : ({color:'blue'})}>CSS dinamico</h2>
+      {/*Classe dinamica no Css*/}
     </div>
   );
 }
