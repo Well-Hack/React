@@ -3,6 +3,7 @@ import MyComponents from './components/MyComponents';
 
 function App() {
   const n = 15;
+  const redTitle = false;
   return (
     <div className="App">
       {/*CSS global */}
@@ -18,6 +19,7 @@ function App() {
       <p>ou</p>
       <h2 style={n > 10 ? ({color:'red'}) : ({color:'blue'})}>CSS dinamico</h2>
       {/*Classe dinamica no Css*/}
+      <h2 className={redTitle ? 'red-title' : 'title'}>Este titulo vai ter Classe Dinamica</h2>
     </div>
   );
 }
