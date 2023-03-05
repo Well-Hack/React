@@ -1,5 +1,6 @@
 import './App.css';
 import MyComponents from './components/MyComponents';
+import Title from './components/Title';
 
 function App() {
   const n = 15;
@@ -20,6 +21,8 @@ function App() {
       <h2 style={n > 10 ? ({color:'red'}) : ({color:'blue'})}>CSS dinamico</h2>
       {/*Classe dinamica no Css*/}
       <h2 className={redTitle ? 'red-title' : 'title'}>Este titulo vai ter Classe Dinamica</h2>
+      {/*CSS modulo*/}
+      <Title/>
     </div>
   );
 }
