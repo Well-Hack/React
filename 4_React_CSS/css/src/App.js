@@ -1,10 +1,19 @@
 import './App.css';
+import CarList from './components/CarList';
 import MyComponents from './components/MyComponents';
 import Title from './components/Title';
 
 function App() {
   const n = 15;
   const redTitle = false;
+
+  const carros = [
+    { id: 1, brand: 'Masserati', color: 'Azul', km: 0,},
+    { id: 2, brand: 'Ferrari', color: 'Preto', km: 3,},
+    { id: 3, brand: 'Aston Martin', color: 'Verde', km: 58},
+    {id: 4, brand: 'Nissan', color: 'Vermelho', km: 0},
+  ]
+
   return (
     <div className="App">
       {/*CSS global */}
@@ -22,7 +31,18 @@ function App() {
       {/*Classe dinamica no Css*/}
       <h2 className={redTitle ? 'red-title' : 'title'}>Este titulo vai ter Classe Dinamica</h2>
       {/*CSS modulo*/}
-      <Title/>
+      <Title/>{'\n'}
+      <div><h1>Desafio CSS</h1>
+
+      {carros.map((car)=>(
+        <CarList
+        key={car.id}
+        brand={car.brand} color={car.color} km = {car.km}       
+        />
+      ))}    
+      </div>
+
+
     </div>
   );
 }
