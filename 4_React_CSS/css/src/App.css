@@ -13,6 +13,34 @@
   }
 }
 
+h1.d1{
+  color: darkgreen;
+  background-color: black;
+  text-decoration: dashed;
+}
+
+
+.desafio{
+  text-align: center;
+
+}
+
+.card{
+    width: 450px;
+    height: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 10px;
+    margin: 10px 30px;
+
+
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -8,6 +8,7 @@
 
 body {
     background-color: aqua;
+    text-align: center;
 
 }
 
@@ -24,6 +25,12 @@ h1{
   box-shadow: 3px 3px 3px rgba(0,0,0,.5);
 
 }
+
+.cl{
+    display: flex; 
+    justify-content: center;
+    margin-top: 50px;
+  }
 
 .title{
   background-color: black;

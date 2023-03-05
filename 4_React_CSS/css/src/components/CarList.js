@@ -1,18 +1,11 @@
-
-
-const CarList = (brand, km, color) => {
+const CarList = ({brand, km, color}) => {
   return (
     <div>
-        <div>
-        <h2>Detalhes do Carro</h2>
-        <ul>
-            <li>Marca do Carro: {brand}</li>
-            <li>Kilometragem rodada: {km}</li>
-            <li>Cor do carro: {color}</li>
-        </ul>
-    </div>
-
-
+        <div className='card'>
+            <p>Marca do Carro: {brand}</p>
+            <p>Kilometragem rodada: {km}</p>
+            <p>Cor do carro: {color}</p>
+        </div>
     </div>
   )
 }

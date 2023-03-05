@@ -12,7 +12,7 @@ function App() {
     { id: 2, brand: 'Ferrari', color: 'Preto', km: 3,},
     { id: 3, brand: 'Aston Martin', color: 'Verde', km: 58},
     {id: 4, brand: 'Nissan', color: 'Vermelho', km: 0},
-  ]
+  ];
 
   return (
     <div className="App">
@@ -32,13 +32,15 @@ function App() {
       <h2 className={redTitle ? 'red-title' : 'title'}>Este titulo vai ter Classe Dinamica</h2>
       {/*CSS modulo*/}
       <Title/>{'\n'}
-      <div><h1>Desafio CSS</h1>
-
-      {carros.map((car)=>(
-        <CarList
-        key={car.id}
-        brand={car.brand} color={car.color} km = {car.km}/>
-      ))}    
+      <div className='desafio'><h1>Desafio CSS</h1>
+          <h1 className='d1'>ShowRoom</h1>
+          <div className='card'>
+            {carros.map((car)=>(
+              <CarList
+              key={car.id}
+              brand={car.brand} color={car.color} km = {car.km}/>
+            ))}
+          </div>    
       </div>
 
 

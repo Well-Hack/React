@@ -16,13 +16,6 @@ import UsersDetails from './components/UsersDetails';
 function App() {
   const [userName2] = useState ("Luana");
 
-  const cars = [ 
-   { id: 1, brand: 'Ferrari', color: 'Vermelho', km: 0, neww: true},
-   { id: 2, brand: 'Kia', color: 'Preto', km: 3, neww: false},
-   { id: 3, brand: 'Mercedes', color: 'Prata', km: 58, neww: false},
-   {id: 4, brand: 'Nissan', color: 'Vermelho', km: 0, neww: true},
-  ];
-
     function showMessage(){
       console.log('Evento de componente pai')
     }
