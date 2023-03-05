@@ -37,8 +37,7 @@ function App() {
       {carros.map((car)=>(
         <CarList
         key={car.id}
-        brand={car.brand} color={car.color} km = {car.km}       
-        />
+        brand={car.brand} color={car.color} km = {car.km}/>
       ))}    
       </div>
 
