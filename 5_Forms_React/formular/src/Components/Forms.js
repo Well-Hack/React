@@ -2,12 +2,12 @@ import './Myforms.css';
 
 const Forms = () => {
   return (
-    <div>Forms
+    <div>
         <h2>Formulario</h2>
         <form>
             <div>
-                <label htmlFor="name">Nome:</label>
-                <input type="text" name='name' placeholder= 'Digite o seu nome'/>
+                <label htmlFor="name" target='name'>Nome:
+                <input type="text" name='name' id='name' placeholder= 'Digite o seu nome'/></label>
 
                 <input type="submit" name="enviar" id="submit" value='enviar'/>
                 <input type="reset" value='Resetar'/>
