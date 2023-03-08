@@ -5,12 +5,13 @@ import {useState} from 'react'
 const Forms = () => {
     //3 - gerenciamnto de dados
     const[name, setName] = useState()
-    const [enail, setEmail] = useState()
+    const [email, setEmail] = useState()
 
     const handleName = (e) => {
-      console.log('mudou o nome')
-
-    }
+        setName(e.target.value);
+    };
+      console.log(name);
+      console.log(email);
 
   return (
     <div>
@@ -28,7 +29,7 @@ const Forms = () => {
       <form>
           <label>
             <span>E-mail</span>
-            <input type='email' name='email' placeholder='Digite seu E-mail'/>
+            <input type='email' name='email' placeholder='Digite seu E-mail' onChange={(e) => setEmail(e.target.value)}/>
            </label>
             <input type="submit" value='Enviar' />
       </form>
