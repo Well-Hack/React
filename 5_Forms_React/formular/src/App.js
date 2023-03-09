@@ -4,7 +4,7 @@ import Forms from './Components/Forms';
 function App() {
   return (
     <div className="App">
-        <Forms/>
+        <Forms user={{name: 'Josias', email:'josias@gmail.com'}}/>
      
     </div>
   );
