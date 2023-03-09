@@ -18,8 +18,11 @@ const Forms = ({user}) => {
       const handleSubmit = (event) => {   
             event.preventDefault();
             console.log('Enviando os Dados');
-            console.log(name, email)
-          };
+            console.log(name, email);
+      // 7  Limapr formulario
+          setName('');
+          setEmail('')
+    };
 
   return (
       <div>
