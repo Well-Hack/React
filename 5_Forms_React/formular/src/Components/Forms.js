@@ -9,6 +9,9 @@ const Forms = ({user}) => {
     const[name, setName] = useState(user ? user.name : '');
     const [email, setEmail] = useState(user ? user.email : '')
 
+
+    const [bio, setBio] = useState("")
+
     const handleName = (e) => {
         setName(e.target.value);
     };
@@ -51,9 +54,14 @@ const Forms = ({user}) => {
                 <input type="text" name='name' id='name' placeholder= 'Digite o seu nome'onChange={(e) => setName(e.target.value)} value={name}/></label>
             </div>
           <label>
+            <span>Biografia:</span>
+            {/*Text Area*/}
+            <textarea name="bio" placeholder='Descrição' onChange={(e) => setBio(e.target.value)} value={}></textarea>
+          </label>
+          <label>
             <span>E-mail</span>
             <input type='email' name='email' placeholder='Digite seu E-mail' onChange={(e) => setEmail(e.target.value)} value={email}/>
-           </label>
+          </label>
             <input type="submit" value='Enviar' />
       </form>
 
