@@ -21,7 +21,7 @@ const Forms = ({user}) => {
       const handleSubmit = (event) => {   
             event.preventDefault();
             console.log('Enviando os Dados');
-            console.log(name, email);
+            console.log(name, email, bio);
       // 7  Limapr formulario
           setName('');
           setEmail('')
@@ -56,14 +56,21 @@ const Forms = ({user}) => {
           <label>
             <span>Biografia:</span>
             {/*Text Area*/}
-            <textarea name="bio" placeholder='Descrição' onChange={(e) => setBio(e.target.value)} value={}></textarea>
+            <textarea name="bio" placeholder='Descrição' onChange={(e) => setBio(e.target.value)} value={bio}></textarea>
           </label>
+            {/* Select*/}
+          
+          <form>
           <label>
+            <span>Função no Sistema</span>
+          </label>
             <span>E-mail</span>
+          <label>
             <input type='email' name='email' placeholder='Digite seu E-mail' onChange={(e) => setEmail(e.target.value)} value={email}/>
           </label>
             <input type="submit" value='Enviar' />
       </form>
+      
 
     </div>
   )
