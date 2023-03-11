@@ -12,6 +12,8 @@ const Forms = ({user}) => {
 
     const [bio, setBio] = useState("")
 
+    const [hole, setHole] = useState("")
+
     const handleName = (e) => {
         setName(e.target.value);
     };
@@ -21,7 +23,7 @@ const Forms = ({user}) => {
       const handleSubmit = (event) => {   
             event.preventDefault();
             console.log('Enviando os Dados');
-            console.log(name, email, bio);
+            console.log(name, email, bio, hole);
       // 7  Limapr formulario
           setName('');
           setEmail('')
@@ -63,7 +65,13 @@ const Forms = ({user}) => {
           <form>
           <label>
             <span>Função no Sistema</span>
+            <select name="hole" onChange={(e) => setHole(e.target.value)}>
+              <option value="user">Usuário</option>
+              <option value="editor">Editor</option>
+              <option value="admin">Adminsitrador</option>
+            </select>
           </label>
+          </form>
             <span>E-mail</span>
           <label>
             <input type='email' name='email' placeholder='Digite seu E-mail' onChange={(e) => setEmail(e.target.value)} value={email}/>
