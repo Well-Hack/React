@@ -4,10 +4,12 @@ import './App.css';
 import{useCallback, useEffect, useState} from "react";
 
 //data
-import {wordsList} from "./data/words";
+import {wordList, wordsList} from "./data/words";
 
 //components
 import StartScreen from './components/StartScreen';
+import Game from './components/Game';
+import GameOver from './components/GameOver';
 
 const stages = [
   {id: 1, name: "start"},
@@ -17,9 +19,12 @@ const stages = [
 
 function App() {
   const [gameStage, setGameStage] = useState(stages[0].name);
+  const [words] = useState(wordList)
   return (
     <div className="App">
-    <StartScreen/>
+      {gameStage === "start" && <StartScreen/>}
+      {gameStage === "game" && <Game/>}
+      {gameStage === "end" && <GameOver/>}
     </div>
   );
 }
