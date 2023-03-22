@@ -54,11 +54,13 @@ function App() {
     console.log(wordLetters);
 
     setGameStage(stages[1].name);
-  };
-   //fill states
+
+    //fill states
    setPickedWord(words);
    setPickedCategory(category);
    setLetters(letters);
+  };
+   
   
  
   //Input do jogador da letra
