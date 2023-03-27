@@ -13,6 +13,11 @@
     text-decoration:underline;
 }
 
+p{
+    letter-spacing: 3px;
+    font-size: 21px;
+}
+
 .wordContainer{
     margin: 1.5em;
     padding: 1.5em;
