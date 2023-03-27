@@ -15,4 +15,17 @@
     margin: 1.5em;
     padding: 1.5em;
     border: 20px solid rgb(201, 81, 2);
+    display: flex;
+}
+
+.letter, .blankSquare{
+    font-size: 70px;
+    line-height: 1.5;
+    border: 3px solid black;
+    height: 100px;
+    width: 100px;
+    text-transform: uppercase;
+    background-color: white;
+    color: red;
+    font-weight: bold;
 }
