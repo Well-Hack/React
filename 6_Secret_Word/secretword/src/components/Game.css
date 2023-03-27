@@ -19,8 +19,8 @@
 }
 
 .letter, .blankSquare{
-    font-size: 70px;
-    line-height: 1.5;
+    font-size: 90px;
+    line-height: 1.2;
     border: 3px solid black;
     height: 100px;
     width: 100px;
@@ -28,4 +28,13 @@
     background-color: white;
     color: red;
     font-weight: bold;
+}
+
+.letterContainer p{
+    margin-bottom: 1.2em;
+}
+
+.letterContainer form{
+    display: flex;
+    align-items: center;
 }
