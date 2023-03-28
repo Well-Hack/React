@@ -1,6 +1,6 @@
 import "./Game.css";
 
-const Game = ({verifyLetter}) => {
+const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters, wrongLetters, guesses, score}) => {
   return (
     <div className = "game">
       <p className= "points">
