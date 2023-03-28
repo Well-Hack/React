@@ -27,7 +27,8 @@ function App() {
 
   const [guessesdLetters, setGussedLetters] = useState([])
   const [wrongLetters, setWrongLetters] = useState ([])
-  const [guesses, setGuesses] = useSa
+  const [guesses, setGuesses] = useState(3)
+  const [score, setScore] = useState(0)
 
   const pickWordAndCategory = () => {
     //pegar alguma categoria
@@ -81,7 +82,7 @@ function App() {
   return (
     <div className="App">
       {gameStage === "start" && <StartScreen startGame={startGame}/>}
-      {gameStage === "game" && <Game verifyLetter={verifyLetter}/>}
+      {gameStage === "game" && <Game verifyLetter={verifyLetter} pickedWord={pickedWord}/>}
       {gameStage === "end" && <GameOver retry={retry}/>}
     </div>
   );
