@@ -21,7 +21,8 @@ p{
 .wordContainer{
     margin: 1.5em;
     padding: 1.5em;
-    border: 20px solid rgb(201, 81, 2);
+    border: 10px solid rgb(201, 81, 2);
+    border-radius: 2%;
     display: flex;
 }
 
