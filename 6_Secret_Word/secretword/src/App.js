@@ -82,7 +82,7 @@ function App() {
   return (
     <div className="App">
       {gameStage === "start" && <StartScreen startGame={startGame}/>}
-      {gameStage === "game" && <Game verifyLetter={verifyLetter} pickedWord={pickedWord}/>}
+      {gameStage === "game" && <Game verifyLetter={verifyLetter} pickedWord={pickedWord} pickedCategory={pickedCategory}/>}
       {gameStage === "end" && <GameOver retry={retry}/>}
     </div>
   );
