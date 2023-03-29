@@ -90,6 +90,8 @@ function App() {
           ...actualWrongLetters, normalizedLetter
       ]);
     }
+    console.log(guessedLetters);
+    console.log(wrongLetters);
   };
 
   //Reiniciar o jogo
