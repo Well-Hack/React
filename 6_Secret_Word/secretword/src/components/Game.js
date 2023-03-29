@@ -1,6 +1,7 @@
 import "./Game.css";
 
 const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters, wrongLetters, guesses, score}) => {
+    const [letter, setLetter] = useState("");
   return (
     <div className = "game">
       <p className= "points">
@@ -24,8 +25,8 @@ const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters
       </div>
       <div className="letterContainer">
         <p> Tente advinhar uma letra da palavra:</p>
-        <form>
-          <input type="text" name="letter" maxLength="1" required/>
+        <form onSubmit>
+          <input type="text" name="letter" maxLength="1" required onChange={(e) => setLetter(e.target.value)} value={letter}/>
           <button>Jogar!</button>
         </form>
       </div>
