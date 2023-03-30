@@ -82,7 +82,7 @@ function App() {
     //push guessed letter or remove a guess
 
     if (letters.includes(normalizedLetter)) {
-        setGussedLetters((actualGuessedLetters) => [
+        setGuessedLetters((actualGuessedLetters) => [
           ...actualGuessedLetters, normalizedLetter
         ]);
     }else {
@@ -92,12 +92,18 @@ function App() {
       setGuesses((actualGuesses) => actualGuesses - 1);
     }
   };
+
+    const clearLetterStates = () => {
+      setGuessedLetters([])
+      setWrongLetters([])
+    }
+
     useEffect(() =>{
 
       if(guesses <= 0){
         //resetar todos os states
 
-        setGameStage([2].name);
+        setGameStage(stages[2].name);
       }
   },[guesses])
 
