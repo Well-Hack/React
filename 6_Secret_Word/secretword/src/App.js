@@ -32,7 +32,7 @@ function App() {
   const [guesses, setGuesses] = useState(guessesQty)
   const [score, setScore] = useState(0)
 
-  const pickWordAndCategory = () => {
+  const pickWordAndCategory = useCallback(() => {
     //pegar alguma categoria
     const categories = Object.keys(words)
     const category = 
@@ -45,9 +45,9 @@ function App() {
     console.log(word);
 
     return{word, category}
-  };
+  },[words]);
   // iniciar o jogo secret word
-  const startGame = () => {
+  const startGame = useCallback(() => {
   //Limpar letras
   clearLetterStates();
   //Buscar palavra e categoria
@@ -68,7 +68,7 @@ function App() {
    setLetters(wordLetters);
 
    setGameStage(stages[1].name)
-  };
+  }, [pickWordAndCategory]);
    
   
  
