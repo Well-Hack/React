@@ -48,6 +48,8 @@ function App() {
   };
   // iniciar o jogo secret word
   const startGame = () => {
+  //Limpar letras
+  clearLetterStates();
   //Buscar palavra e categoria
     const {word, category } = pickWordAndCategory();
 
@@ -123,8 +125,6 @@ function App() {
       //reiniciar com nova palabra
       startGame();
     }
-    console.log(uniqueLetters)
-
   }, [guessedLetters, letters, startGame, gameStage]);
 
   //Reiniciar o jogo
