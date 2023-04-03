@@ -99,25 +99,33 @@ function App() {
       setGuessedLetters([])
       setWrongLetters([])
     };
-    //Checar se as tentativas terminaram
-    useEffect
+  //Checar se as tentativas terminaram
 
-    useEffect(() =>{
 
-      if(guesses <= 0){
-        //resetar todos os states
-        clearLetterStates()
+  useEffect(() =>{
 
-        setGameStage(stages[2].name);
-      }
-      },[guesses])
+    if(guesses <= 0){
+      //resetar todos os states
+      clearLetterStates()
 
-    //Checar condição de vitória
-    useEffect(() => {
+      setGameStage(stages[2].name);
+    }
+    },[guesses])
 
-      const uniqueLetter = [... new Set(letters)]
+  //Checar condição de vitória
+  useEffect(() => {
+    const uniqueLetters = [... new Set(letters)];
+    //win condition
+    if(guessedLetters.length === uniqueLetters.length && gameStage === stages[1].name){
+      //add score
+      setScore ((actualScore) => actualScore += 100)
 
-    }, [guessedLetters])
+      //reiniciar com nova palabra
+      startGame();
+    }
+    console.log(uniqueLetters)
+
+  }, [guessedLetters, letters, startGame, gameStage]);
 
   //Reiniciar o jogo
   const retry = () => {
