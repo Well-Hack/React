@@ -98,7 +98,9 @@ function App() {
     const clearLetterStates = () => {
       setGuessedLetters([])
       setWrongLetters([])
-    }
+    };
+    //Checar se as tentativas terminaram
+    useEffect
 
     useEffect(() =>{
 
@@ -108,7 +110,14 @@ function App() {
 
         setGameStage(stages[2].name);
       }
-  },[guesses])
+      },[guesses])
+
+    //Checar condição de vitória
+    useEffect(() => {
+
+      const uniqueLetter = [... ne]
+
+    }, [guessedLetters])
 
   //Reiniciar o jogo
   const retry = () => {
