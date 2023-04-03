@@ -44,7 +44,7 @@ function App() {
     const word = words[category][Math.floor(Math.random() * words[category].length)];
     console.log(word);
 
-    return{word, category}
+    return{word, category};
   },[words]);
   // iniciar o jogo secret word
   const startGame = useCallback(() => {
