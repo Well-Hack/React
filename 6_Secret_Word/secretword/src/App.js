@@ -115,7 +115,7 @@ function App() {
     //Checar condição de vitória
     useEffect(() => {
 
-      const uniqueLetter = [... ne]
+      const uniqueLetter = [... new Set(letters)]
 
     }, [guessedLetters])
 
